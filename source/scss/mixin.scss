@@ -1,0 +1,6 @@
+@mixin tema($cor-menu, $cor-fundo) {
+	&:hover {
+		color: $cor-menu;
+		background-color: $cor-fundo;
+	}
+}
