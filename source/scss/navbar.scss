@@ -1,6 +1,45 @@
-.safe-area {
-	height: 100vh;
-	background-color: #fcdb00;
-	padding-top: 1rem;
+body {
+	margin: 0px;
+	padding: 0px;
 }
 
+.brand {
+	float: left;
+	color: $navbar-brand-cor;
+	padding-left: 35px;
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+.menu {
+	@include tema($navbar-menu-cor, $navbar-fundo-cor);
+
+	float: right;
+	margin-top: 25px;
+	font-weight: bold;
+	padding-right: 200px;
+
+	ul {
+		list-style-type: none;
+		display: inline-flex;
+
+		li {
+			padding: 5px;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		padding: 3px;
+
+		&:hover {
+			@extend %item-menu;
+			background-color: $navbar-menu-basico-cor;
+			padding: 3px;
+		}
+	}
+
+	&:hover {
+		@extend %item-menu;
+	}
+}
